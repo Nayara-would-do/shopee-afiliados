@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopee Afiliados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🛍️ Gerador de Conteúdo</h1>
+    <p class="subtitulo">Cole as informações do produto e gere conteúdo pronto!</p>
+
+    <div class="formulario">
+      <label>Nome do produto</label>
+      <input type="text" id="nome" placeholder="Ex: Tênis Nike Air Max">
+
+      <label>Preço</label>
+      <input type="text" id="preco" placeholder="Ex: R$ 199,90">
+
+      <label>Avaliação (opcional)</label>
+      <input type="text" id="avaliacao" placeholder="Ex: 4.8 estrelas">
+
+      <label>Descrição do produto</label>
+      <textarea id="descricao" placeholder="Cole aqui a descrição do produto..."></textarea>
+
+      <label>Link de afiliado</label>
+      <input type="text" id="link" placeholder="Cole aqui o link da Shopee">
+
+      <button onclick="gerarConteudo()">✨ Gerar Conteúdo</button>
+    </div>
+
+    <div class="resultado" id="resultado" style="display:none">
+      
+      <div class="aba-container">
+        <button class="aba ativa" onclick="mostrarAba('whatsapp')">WhatsApp</button>
+        <button class="aba" onclick="mostrarAba('reels')">Reels/TikTok</button>
+        <button class="aba" onclick="mostrarAba('instagram')">Instagram</button>
+        <button class="aba" onclick="mostrarAba('thumbnail')">Thumbnail</button>
+      </div>
+
+      <div id="whatsapp" class="conteudo-aba"></div>
+      <div id="reels" class="conteudo-aba" style="display:none"></div>
+      <div id="instagram" class="conteudo-aba" style="display:none"></div>
+      <div id="thumbnail" class="conteudo-aba" style="display:none"></div>
+
+    </div>
+
+    <div class="loading" id="loading" style="display:none">
+      ⏳ Gerando conteúdo, aguarde...
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
